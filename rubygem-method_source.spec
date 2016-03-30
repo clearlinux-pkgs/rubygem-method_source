@@ -4,7 +4,7 @@
 #
 Name     : rubygem-method_source
 Version  : 0.8.2
-Release  : 6
+Release  : 7
 URL      : https://rubygems.org/downloads/method_source-0.8.2.gem
 Source0  : https://rubygems.org/downloads/method_source-0.8.2.gem
 Summary  : No detailed summary available
