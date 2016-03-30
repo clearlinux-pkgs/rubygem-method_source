@@ -4,7 +4,7 @@
 #
 Name     : rubygem-method_source
 Version  : 0.8.2
-Release  : 5
+Release  : 6
 URL      : https://rubygems.org/downloads/method_source-0.8.2.gem
 Source0  : https://rubygems.org/downloads/method_source-0.8.2.gem
 Summary  : No detailed summary available
@@ -12,10 +12,7 @@ Group    : Development/Tools
 License  : MIT
 BuildRequires : ruby
 BuildRequires : rubygem-bacon
-BuildRequires : rubygem-minitest
-BuildRequires : rubygem-rake
 BuildRequires : rubygem-rdoc
-BuildRequires : rubygem-test-unit
 
 %description
 method_source
@@ -50,65 +47,23 @@ cp -pa .%{_bindir}/* \
 %{buildroot}%{_bindir}/
 fi
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=intel.com,localhost
-pushd %{buildroot}%{gem_dir}/gems/method_source-0.8.2
-rake --trace test TESTOPTS="-v"
-popd
-
 
 %files
 %defattr(-,root,root,-)
-/usr/lib64/ruby/gems/2.2.0/cache/method_source-0.8.2.gem
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/Method/cdesc-Method.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/IncompleteExpression/%3d%3d%3d-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/IncompleteExpression/cdesc-IncompleteExpression.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/IncompleteExpression/rbx%3f-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/cdesc-CodeHelpers.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/comment_describing-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/complete_expression%3f-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/expression_at-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/extract_first_expression-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/CodeHelpers/extract_last_comment-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/MethodExtensions/cdesc-MethodExtensions.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/MethodExtensions/comment-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/MethodExtensions/included-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/MethodExtensions/source-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/ReeSourceLocation/cdesc-ReeSourceLocation.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/ReeSourceLocation/source_location-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/MethodExtensions/cdesc-MethodExtensions.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/MethodExtensions/source_location-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/MethodExtensions/trace_func-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/ProcExtensions/cdesc-ProcExtensions.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/ProcExtensions/source_location-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/UnboundMethodExtensions/cdesc-UnboundMethodExtensions.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/UnboundMethodExtensions/source_location-i.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceLocation/cdesc-SourceLocation.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/SourceNotFoundError/cdesc-SourceNotFoundError.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/cdesc-MethodSource.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/comment_helper-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/extract_code-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/lines_for-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/source_helper-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/MethodSource/valid_expression%3f-c.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/Proc/cdesc-Proc.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/UnboundMethod/cdesc-UnboundMethod.ri
-/usr/lib64/ruby/gems/2.2.0/doc/method_source-0.8.2/ri/cache.ri
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/.gemtest
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/.travis.yml
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/.yardopts
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/Gemfile
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/LICENSE
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/README.markdown
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/Rakefile
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/lib/method_source.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/lib/method_source/code_helpers.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/lib/method_source/source_location.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/lib/method_source/version.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/method_source.gemspec
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/test/test.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/test/test_code_helpers.rb
-/usr/lib64/ruby/gems/2.2.0/gems/method_source-0.8.2/test/test_helper.rb
-/usr/lib64/ruby/gems/2.2.0/specifications/method_source-0.8.2.gemspec
+/usr/lib64/ruby/gems/2.3.0/cache/method_source-0.8.2.gem
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/.gemtest
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/.travis.yml
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/.yardopts
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/Gemfile
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/LICENSE
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/README.markdown
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/Rakefile
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/lib/method_source.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/lib/method_source/code_helpers.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/lib/method_source/source_location.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/lib/method_source/version.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/method_source.gemspec
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/test/test.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/test/test_code_helpers.rb
+/usr/lib64/ruby/gems/2.3.0/gems/method_source-0.8.2/test/test_helper.rb
+/usr/lib64/ruby/gems/2.3.0/specifications/method_source-0.8.2.gemspec
